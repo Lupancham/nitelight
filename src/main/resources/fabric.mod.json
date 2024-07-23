@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "nitelight",
+	"version": "${version}",
+	"name": "nitelight",
+	"description": "Lupancham's first mod! Created by me to give you the boo >:3",
+	"authors": [
+		"Lupancham"
+	],
+	"contact": {
+		"homepage": "https://lupancham.net/",
+		"sources": "https://github.com/Lupancham/nitelight"
+	},
+	"license": "LFSP-1.0",
+	"icon": "assets/nitelight/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lupancham.nitelight.Nitelight"
+		],
+		"client": [
+			"net.lupancham.nitelight.NitelightClient"
+		],
+		"fabric-datagen": [
+			"net.lupancham.nitelight.NitelightDataGenerator"
+		]
+	},
+	"mixins": [
+		"nitelight.mixins.json",
+		{
+			"config": "nitelight.client.mixins.json",
+			"environment": "*"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
